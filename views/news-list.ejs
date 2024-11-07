@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+        .news-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .news-item {
+            width: 30%; /* Điều chỉnh độ rộng tùy ý */
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .news-item h2 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .news-item p {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<h1><%= title %></h1>
+<div class="news-list">
+    <% news.forEach(item => { %>
+        <a href="/news/<%= item.id %>">
+            <div class="news-item">
+                <% if (item.image) { %>
+                    <img src="<%= item.image %>" alt="<%= item.title %>">
+                <% } %>
+                <h2><%= item.title %></h2>
+                <p><%= item.summary %></p>
+            </div>
+        </a>
+    <% }); %>
+</div>
+</body>
+</html>

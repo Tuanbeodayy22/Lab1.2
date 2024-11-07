@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .aboutme-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .aboutme-container p {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .aboutme-container strong { /* Làm nổi bật tên thuộc tính */
+            color: #2196F3; /* Màu xanh dương */
+        }
+        .aboutme-container {
+            /* ... */
+            animation: fadeIn 2s ease-in-out; /* Thêm animation */
+        }
+
+        .aboutme-container p {
+            /* ... */
+        }
+
+        .aboutme-container strong {
+            /* ... */
+        }
+
+        @keyframes fadeIn { /* Định nghĩa animation fadeIn */
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }}
+    </style>
+</head>
+<body>
+<h1><%= title %></h1>
+<div class="aboutme-container">
+    <p><strong>Tên:</strong> <%= aboutme.name %></p>
+    <p><strong>MSV:</strong> <%= aboutme.MSV %></p>
+    <p><strong>SĐT:</strong> <%= aboutme.SĐT %></p>
+    <p><strong>Ngành học:</strong> <%= aboutme.Major %></p>
+    <p><strong>Địa chỉ:</strong> <%= aboutme.Adress %></p>
+</div>
+</body>
+</html>

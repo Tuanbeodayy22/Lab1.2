@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+<h1><%= item.title %></h1>
+<% if (item.image) { %>
+    <img src="<%= item.image %>" alt="<%= item.title %>">
+<% } %>
+<p><%= item.content %></p>
+</body>
+</html>
